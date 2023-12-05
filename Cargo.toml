@@ -1,0 +1,23 @@
+[package]
+name = "wasmtime-playground"
+version = "0.1.0"
+edition = "2021"
+
+
+[workspace]
+members = [
+    "runtime",
+    "example-plugin",
+]
+resolver = "2"
+
+[workspace.dependencies]
+runtime = { path = "runtime" }
+example-plugin = { path = "example-plugin" }
+
+anyhow = "1.0.75"
+wasmtime = "15.0.0"
+wasmtime-wasi = "15.0.0"
+
+[dependencies]
+runtime = { workspace = true }
